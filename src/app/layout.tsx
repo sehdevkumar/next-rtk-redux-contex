@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Provider } from "react-redux";
-import { appStore } from "@/store/store";
 import AppReduxContext from "@/store/AppReduxContextProvider";
 import GlobalLoading from "./components/GlobalLoading";
+import WrapperComponent from "./components/WrapperComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,11 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <AppReduxContext>
+        <WrapperComponent>
            {children}
-           <GlobalLoading/>
-        </AppReduxContext>
-        
+        </WrapperComponent>        
       </body>
     </html>
   );

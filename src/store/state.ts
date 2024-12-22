@@ -11,5 +11,5 @@ export type AppStateType = {
 
 export const initialAppState: AppStateType = {
      userInfo: null ,
-     isLoading: false
+     isLoading: true
 }
