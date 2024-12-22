@@ -13,7 +13,7 @@ const WrapperComponent = ({ children }: { children: React.ReactNode }) => {
                 <Header />
                 <div className="flex h-[calc(100vh-125px)]">
                     <Sidebar />
-                    <main className="flex-1 p-5 relative text-[#191919]">
+                    <main className="flex-1 p-5 relative text-[#191919] overflow-auto">
                         {children}
                         <GlobalLoading />
                     </main>
