@@ -4,6 +4,7 @@ import "./globals.css";
 import { Provider } from "react-redux";
 import { appStore } from "@/store/store";
 import AppReduxContext from "@/store/AppReduxContextProvider";
+import GlobalLoading from "./components/GlobalLoading";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <AppReduxContext>
            {children}
+           <GlobalLoading/>
         </AppReduxContext>
         
       </body>
