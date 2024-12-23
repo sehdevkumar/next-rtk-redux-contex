@@ -26,7 +26,6 @@ export default function PostsPage() {
         dispatch({ type: 'SET-APP-LOADING', payload: false });
       })
       .catch(error =>{
-        dispatch({ type: 'SET-APP-LOADING', payload: false });
         if (axios.isCancel(error)) {
           console.log('Request canceled');
         } else {
@@ -38,7 +37,6 @@ export default function PostsPage() {
         if (cancelTokenSource) {
           cancelTokenSource.cancel();
         }
-        dispatch({ type: 'SET-APP-LOADING', payload: false });
       }
     }, []);
 

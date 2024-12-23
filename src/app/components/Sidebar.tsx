@@ -31,6 +31,16 @@ export default async function Sidebar() {
                         Users
                     </Link>
                 </li>
+                <li className={`py-2 px-4 hover:bg-gray-300 dark:hover:bg-gray-700`}>
+                    <Link href="/login">
+                        Login
+                    </Link>
+                </li>
+                <li className={`py-2 px-4 hover:bg-gray-300 dark:hover:bg-gray-700`}>
+                    <Link href="/register">
+                        Register
+                    </Link>
+                </li>
             </ul>
         </div>
     );

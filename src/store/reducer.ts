@@ -6,8 +6,6 @@ import { ActionSetAppLoading, ActionSetUserInfo } from "./action";
 export const fetchUserInfo = createAsyncThunk(
   "app/fetchUserInfo",
   async (payload: any) => {
-    console.log("Payload:", payload);
-
 
     try {
       return payload;
